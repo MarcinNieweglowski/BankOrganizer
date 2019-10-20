@@ -22,13 +22,10 @@ import marcin.entity.Bank;
 @RunWith(PowerMockRunner.class)
 public class BankReaderTest {
 
-	BankReader reader;
-
-	File file;
+	private File file;
 
 	@Before
 	public void setUp() throws Exception {
-		reader = new BankReader();
 		file = PowerMockito.mock(File.class);
 
 		ObjectMapper mapperMock = PowerMockito.mock(ObjectMapper.class);

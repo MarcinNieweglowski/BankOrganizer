@@ -14,7 +14,7 @@ import org.powermock.reflect.internal.WhiteboxImpl;
 @RunWith(PowerMockRunner.class)
 public class ScreenChangerTest {
 
-	ScreenChanger changer;
+	private ScreenChanger changer;
 
 	@Before
 	public void setUp() {
