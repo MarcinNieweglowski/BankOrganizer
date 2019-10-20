@@ -34,7 +34,7 @@ public class BankWriter {
 			System.out.println("Location does not not exist. Creating...");
 			locationFile.mkdirs();
 			if (!locationFile.exists())
-				throw new IOException("Cannot creat the Directory Location folder");
+				throw new IOException("Cannot create the Directory Location folder");
 		}
 	}
 

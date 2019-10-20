@@ -80,14 +80,17 @@ public class BankServiceImplTest {
 		PowerMockito.when(EntityDtoTransformer.transformEntityToDto(entityList)).thenReturn(dtoList);
 
 		List<BankDTO> banks = bankService.getAllBanks();
-		
+
 		Assert.assertEquals("Expected the return value to be", banks, dtoList);
 	}
 
 	@Test
 	public void getAllBanksShouldReturnEmptyListIfNoFileWasFoundInDirectory() throws Exception {
+		PowerMockito.mockStatic(BankReader.class);
+		PowerMockito.when(BankReader.getLastModifiedFile()).thenReturn(null);
 
 		List<BankDTO> banks = bankService.getAllBanks();
+
 		Assert.assertEquals("Expected the list to be empty", banks.size(), 0);
 		Assert.assertNotNull("Expected a list to be returned", banks);
 	}
