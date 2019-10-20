@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane fx:id="rootPane" fx:controller="marcin.main.MainController"
+	xmlns:fx="http://javafx.com/fxml">
+	<HBox fx:id="hBox">
+		<Button onAction="#showAll" fx:id="showAllBtn" text="Show all" />
+		<Button onAction="#addBank" fx:id="addBankBtn" text="Add Bank" />
+		<Button onAction="#exit" fx:id="exitBtn" text="Exit" />
+	</HBox>
+
+</AnchorPane>

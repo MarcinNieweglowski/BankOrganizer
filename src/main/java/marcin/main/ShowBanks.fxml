@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextArea?>
+<AnchorPane fx:id="anchorPane" fx:controller="marcin.main.ShowBanksController"
+	xmlns:fx="http://javafx.com/fxml">
+	<VBox fx:id="vBox">
+		<TableView fx:id="tableView">
+			<TableColumn fx:id="bankName" />
+			<TableColumn fx:id="money" />
+			<TableColumn fx:id="percentage" />
+			<TableColumn fx:id="dueDate" />
+			<TableColumn fx:id="daysLeft" />
+			<TableColumn fx:id="requirements" />
+			<TableColumn fx:id="additionalInfo" />
+		</TableView>
+
+		<HBox fx:id="updateBox">
+
+			<VBox fx:id="updateFields">
+				<TextField fx:id="updateBankName" />
+				<DatePicker fx:id="updateDueDate" />
+				<TextField fx:id="updateMoney" />
+				<TextField fx:id="updatePercentage" />
+				<TextField fx:id="updateRequirements" />
+				<TextField fx:id="updateAdditionalInfo" />
+				<Button fx:id="editBtn" onAction="#editBank" />
+				<Button fx:id="deleteBtn" onAction="#deleteBank" />
+			</VBox>
+
+			<TextArea fx:id="logs" />
+		</HBox>
+
+		<VBox fx:id="vBoxScreenChangingBtns">
+			<Button fx:id="addBankBtn" onAction="#addBank" />
+			<Button fx:id="changeScreenBtn" onAction="#changeScreen" />
+		</VBox>
+	</VBox>
+</AnchorPane>

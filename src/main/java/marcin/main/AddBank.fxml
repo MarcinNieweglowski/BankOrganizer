@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.text.TextFlow?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane fx:id="borderPane" fx:controller="marcin.main.AddBankController"
+	xmlns:fx="http://javafx.com/fxml">
+	<Label fx:id="title" />
+	<VBox fx:id="vBox">
+		<GridPane fx:id="gridPane">
+			<Label fx:id="bankNameLabel" />
+			<TextField fx:id="bankName" />
+
+			<Label fx:id="requirementsLabel" />
+			<TextField fx:id="requirements" />
+
+			<Label fx:id="moneyLabel" />
+			<TextField fx:id="money" />
+
+			<Label fx:id="percentageLabel" />
+			<TextField fx:id="percentage" />
+
+			<Label fx:id="dueDateLabel" />
+			<DatePicker fx:id="dueDate" />
+
+			<Label fx:id="additionalInfoLabel" />
+			<TextField fx:id="additionalInfo" />
+		</GridPane>
+
+		<Button fx:id="addBankBtn" onAction="#addBank" />
+		<Button fx:id="mainWindowBtn" onAction="#changeScreen" />
+		<Button fx:id="showAllBtn" onAction="#showAll" />
+	</VBox>
+	<TextArea fx:id="logs" />
+
+</BorderPane>
